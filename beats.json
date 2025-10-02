@@ -20,10 +20,10 @@
     "duration": 180
   },
   {
-    "title": "No Reference",
-    "artist": "AlexLock",
-    "src": "beats/noreference.wav",
-    "image": "img/nike.jpeg",
+    "title": "Beat Niebla",
+    "artist": "Rone",
+    "src": "beats/beatniebla.mp3",
+    "image": "img/rap.jpeg",
     "bpm": 140,
     "genre": "Trap",
     "price": 25,
