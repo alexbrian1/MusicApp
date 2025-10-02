@@ -28,5 +28,25 @@
     "genre": "Trap",
     "price": 25,
     "duration": 180
+  },
+  {
+    "title": "Dimelo",
+    "artist": "Keep",
+    "src": "beats/dimelo.mp3",
+    "image": "img/rap1.jpeg",
+    "bpm": 140,
+    "genre": "Raggaeton",
+    "price": 25,
+    "duration": 180
+  },
+  {
+    "title": "Powerade",
+    "artist": "Keep",
+    "src": "beats/powerade.mp3",
+    "image": "img/rap2.jpeg",
+    "bpm": 140,
+    "genre": "Rap",
+    "price": 25,
+    "duration": 180
   }
 ]
