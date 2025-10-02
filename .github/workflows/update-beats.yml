@@ -1,0 +1,36 @@
+name: Update Beats JSON
+
+on:
+  push:
+    paths:
+      - "beats/**"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate beats.json
+        run: |
+          echo "[" > beats.json
+          first=true
+          for file in beats/*.{mp3,wav}; do
+            [ -f "$file" ] || continue
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> beats.json
+            fi
+            name=$(basename "$file" | sed 's/\.[^.]*$//')
+            echo "  {\"title\": \"$name\", \"artist\": \"BEATMAKER\", \"src\": \"$file\", \"image\": \"beats/default.jpg\", \"bpm\": 140, \"genre\": \"Trap\", \"price\": 25, \"duration\": 180}" >> beats.json
+          done
+          echo "]" >> beats.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add beats.json
+          git commit -m "Auto-update beats.json" || echo "No changes"
+          git push

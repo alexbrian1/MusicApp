@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEATMAKER - Productor Musical</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>D₩OTT</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca</a></li>
+                <li><a href="#beats">Beats</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span>aaaa</span>
+                <span>a</span>
+                <span>dd</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">PRODUCTOR MUSICAL</h2>
+                <p class="hero-subtitle">Creando beats únicos que definen el futuro del sonido urbano</p>
+                <button class="cta-button" onclick="scrollToSection('beats')">
+                    <i class="fas fa-play"></i>
+                    Escuchar Beats
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="/img/alextodos.jpg" alt="Productor Musical">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Acerca del Artista</h3>
+                    <p>Con más de 5 años de experiencia en la producción musical, me especializo en crear beats únicos que fusionan elementos del trap, hip-hop y música urbana contemporánea.</p>
+                    <p>Mi pasión por la música me ha llevado a colaborar con artistas emergentes y establecidos, siempre buscando ese sonido distintivo que hace la diferencia.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/img/alexdr.jpg" alt="Estudio de Producción">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beats Section -->
+    <section id="beats" class="beats">
+        <div class="container">
+            <h3 class="section-title">Catálogo de Beats</h3>
+            
+            <!-- Audio Player -->
+            <div class="audio-player">
+                <div class="player-info">
+                    <img id="currentTrackImage" src="/placeholder.svg?height=80&width=80" alt="Track Cover">
+                    <div class="track-details">
+                        <h4 id="currentTrackTitle">Selecciona un Beat</h4>
+                        <p id="currentTrackArtist">BEATMAKER</p>
+                    </div>
+                </div>
+                
+                <div class="player-controls">
+                    <button id="prevBtn" class="control-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="playPauseBtn" class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="nextBtn" class="control-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+                
+                <div class="player-progress">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                        <input type="range" id="progressSlider" min="0" max="100" value="0">
+                    </div>
+                    <span id="totalTime">0:00</span>
+                </div>
+                
+                <div class="player-volume">
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                </div>
+            </div>
+
+            <!-- Beats Grid (dinámico) -->
+            <div id="beatsGrid" class="beats-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3 class="section-title">Contacto</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu Nombre" required>
+                <input type="email" placeholder="Tu Email" required>
+                <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BEATMAKER. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Audio element -->
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

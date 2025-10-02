@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Back to Classic",
+    "artist": "AlexLock",
+    "src": "beats/backtoclassicmp4.wav",
+    "image": "img/46580hd.jpg",
+    "bpm": 140,
+    "genre": "Trap",
+    "price": 25,
+    "duration": 180
+  },
+  {
+    "title": "No Rapper",
+    "artist": "AlexLock",
+    "src": "beats/norapperv2.mp3",
+    "image": "img/garchomp.jpg",
+    "bpm": 140,
+    "genre": "Trap",
+    "price": 25,
+    "duration": 180
+  },
+  {
+    "title": "No Reference",
+    "artist": "AlexLock",
+    "src": "beats/noreference.wav",
+    "image": "img/nike.jpeg",
+    "bpm": 140,
+    "genre": "Trap",
+    "price": 25,
+    "duration": 180
+  }
+]
